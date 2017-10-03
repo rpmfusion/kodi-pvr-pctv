@@ -1,12 +1,12 @@
-%global commit 85d6eae79876af8a6db2413e3884296520271768
+%global commit 89438d2972fd9eb7e3290272a07b722fbc73ae42
 %global short_commit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20170324
+%global commit_date 20170621
 
 %global kodi_addon pvr.pctv
 %global kodi_version 17.0
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        1.4.7
+Version:        1.4.8
 Release:        1%{?dist}
 Summary:        PVR Client to connect PCTV Systems Broadway to Kodi
 
@@ -56,6 +56,9 @@ cp -p %{SOURCE1} .
 
 
 %changelog
+* Tue Oct 03 2017 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.4.8-1
+- Update to 1.4.8
+
 * Fri Apr 28 2017 Mohamed El Morabity <melmorabity@fedorapeople.org> - 1.4.7-1
 - Update to latest stable release for Kodi 17
 
