@@ -1,13 +1,13 @@
-%global commit 5b47d9fe5a33a72c6372e9ab4d7d49644f5a5971
+%global commit 9d95bab1d49b80bb11b86373ca7a44838d12adb5
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180205
+%global commitdate 20180825
 
 %global kodi_addon pvr.pctv
 %global kodi_version 18.0
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        2.3.1
-Release:        2%{?dist}
+Version:        2.4.3
+Release:        1%{?dist}
 Summary:        PCTV PVR for Kodi
 
 License:        GPLv2+
@@ -21,7 +21,7 @@ BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(jsoncpp)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -49,6 +49,10 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Sat Sep 01 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.4.3-1
+- Update to 2.4.3
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.3.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
