@@ -1,18 +1,15 @@
-%global commit 9d95bab1d49b80bb11b86373ca7a44838d12adb5
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180825
-
 %global kodi_addon pvr.pctv
 %global kodi_version 18.0
+%global kodi_codename Leia
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        2.4.3
-Release:        3%{?dist}
+Version:        2.4.5
+Release:        1%{?dist}
 Summary:        PCTV PVR for Kodi
 
 License:        GPLv2+
 URL:            https://github.com/kodi-pvr/%{kodi_addon}/
-Source0:        https://github.com/kodi-pvr/%{kodi_addon}/archive/%{shortcommit}/%{kodi_addon}-%{shortcommit}.tar.gz
+Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
@@ -28,7 +25,7 @@ ExcludeArch:    %{power64} ppc64le
 
 
 %prep
-%autosetup -n %{kodi_addon}-%{commit}
+%autosetup -n %{kodi_addon}-%{version}-%{kodi_codename}
 
 
 %build
@@ -49,6 +46,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Mon Jan 13 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 2.4.5-1
+- Update to 2.4.5
+
 * Mon Mar 04 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 2.4.3-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 
