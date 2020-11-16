@@ -3,7 +3,7 @@
 %global kodi_codename Matrix
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        5.0.0
+Version:        6.0.0
 Release:        1%{?dist}
 Summary:        PCTV PVR for Kodi
 
@@ -45,8 +45,15 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Mon Nov 16 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 6.0.0-1
+- Update to 6.0.0
+
 * Thu Aug 20 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 5.0.0-1
 - Update to 5.0.0 (switch to Matrix branch)
+
+* Thu Aug 20 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 5.0.0-3
+- Drop useless BRs
+- Add license file
 
 * Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.0.0-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
