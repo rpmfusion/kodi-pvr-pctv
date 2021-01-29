@@ -3,7 +3,7 @@
 %global kodi_codename Matrix
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        6.0.0
+Version:        6.1.0
 Release:        1%{?dist}
 Summary:        PCTV PVR for Kodi
 
@@ -45,6 +45,9 @@ export PKG_CONFIG_ALLOW_SYSTEM_CFLAGS=1
 
 
 %changelog
+* Fri Jan 29 2021 Mohamed El Morabity <melmorabity@fedoraproject.org> - 6.1.0-1
+- Update to 6.1.0
+
 * Mon Nov 16 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 6.0.0-1
 - Update to 6.0.0
 
