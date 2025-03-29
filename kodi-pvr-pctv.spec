@@ -3,8 +3,8 @@
 %global kodi_codename Omega
 
 Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
-Version:        21.0.0
-Release:        4%{?dist}
+Version:        21.0.2
+Release:        1%{?dist}
 Summary:        PCTV PVR for Kodi
 
 License:        GPL-2.0-or-later
@@ -55,6 +55,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Sat Mar 29 2025 Leigh Scott <leigh123linux@gmail.com> - 21.0.2-1
+- Update to 21.0.2
+
 * Sat Mar 15 2025 Leigh Scott <leigh123linux@gmail.com> - 21.0.0-4
 - Rebuild for new libjsoncpp
 
